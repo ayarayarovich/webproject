@@ -1,6 +1,7 @@
 import './scss/style.scss'
-import { setupCounter } from './ts/counter'
+import { setupPreloader } from './ts/preloader'
+
 
 document.addEventListener('DOMContentLoaded', () => {
-    setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+    setupPreloader(document.querySelector<HTMLDivElement>('.preloader')!, /*just for demo*/ 5)
 })
