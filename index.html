@@ -6,14 +6,101 @@
     <link rel="stylesheet" href="https://use.typekit.net/zfv7wzj.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Star Wars</title>
+    <style>
+      body:has(.preloader--show) {
+        overflow: hidden;
+      }
+
+      .preloader.preloader--show {
+        transform: translateY(0);
+      }
+
+      .preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        height: 100vh;
+        width: 100%;
+        background-color: #fff;
+
+        /*Preloader is hidden unless .preloader--show is applied.*/
+        transform: translateY(-100%);
+        transition: transform 1s ease;
+        will-change: transform;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+
+      .preloader__logo {
+         height: 20vmin;
+      }
+
+      .preloader__spinner {
+        position: relative;
+        width: 80px;
+        height: 80px;
+      }
+      .preloader__spinner div {
+        position: absolute;
+        top: 33px;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background: #000;
+        animation-timing-function: cubic-bezier(0, 1, 1, 0);
+      }
+      .preloader__spinner div:nth-child(1) {
+        left: 8px;
+        animation: spin1 0.6s infinite;
+      }
+      .preloader__spinner div:nth-child(2) {
+        left: 8px;
+        animation: spin2 0.6s infinite;
+      }
+      .preloader__spinner div:nth-child(3) {
+        left: 32px;
+        animation: spin2 0.6s infinite;
+      }
+      .preloader__spinner div:nth-child(4) {
+        left: 56px;
+        animation: spin3 0.6s infinite;
+      }
+      @keyframes spin1 {
+        0% {
+          transform: scale(0);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      @keyframes spin3 {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(0);
+        }
+      }
+      @keyframes spin2 {
+        0% {
+          transform: translate(0, 0);
+        }
+        100% {
+          transform: translate(24px, 0);
+        }
+      }
+    </style>
   </head>
   <body>
 
     <div class="preloader preloader--show">
       <img class="preloader__logo" src="/star-wars-logo.svg" alt="">
-      <div class="preloader__progress">
-        <p class="preloader__percent"></p>
-        <div class="preloader__bar"></div>
+      <div class="preloader__spinner">
+        <div></div><div></div><div></div><div></div>
       </div>
     </div>
 
