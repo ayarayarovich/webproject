@@ -45,21 +45,12 @@ export function setupPosters(container: HTMLElement) {
             button,
             tooltip,
             {
-                placement: 'top',
-                modifiers: [
-                    {
-                        name: 'offset',
-                        options: {
-                            offset: [0, 16]
-                        }
-                    }
-                ]
+                placement: 'bottom',
             }
         )
 
         const showTooltip = () => {
             tooltip.setAttribute('data-show', '')
-            // tooltip.focus()
             popperInstance.update()
         }
 
@@ -68,7 +59,6 @@ export function setupPosters(container: HTMLElement) {
         }
 
         button.addEventListener('click', showTooltip)
-        document.addEventListener('scroll', hideTooltip)
         poster.addEventListener('mouseleave', hideTooltip)
 
         container.append(poster)
