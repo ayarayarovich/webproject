@@ -1,0 +1,83 @@
+.posters {
+  background-color: #000000;
+  padding-block: 6rem;
+
+  @include media-breakpoint-down(sm) {
+    padding-inline: 2rem;
+  }
+
+  &__inner > .grid {
+    --bs-columns: 2;
+    --bs-gap: 2rem;
+
+    @include media-breakpoint-up(md) {
+      --bs-columns: 3;
+      --bs-gap: 5rem;
+    }
+    @include media-breakpoint-up(lg) {
+      --bs-gap: 10rem;
+    }
+
+  }
+}
+
+.poster {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+
+  &__image, &__background {
+    width: 100%;
+  }
+
+  &__background {
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+    z-index: -1;
+    filter: blur(1rem) opacity(0.7);
+  }
+
+  &__button {
+    background: none;
+    border: none;
+    width: 20%;
+    > svg {
+      width: 100%
+    }
+  }
+
+  &__tooltip {
+    background-color: #1C1C1C;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    width: 90%;
+    box-shadow: 0 0 1rem #000000;
+    display: none;
+  }
+
+  &__tooltip[data-show] {
+    display: block;
+  }
+
+  &__link {
+    display: block;
+    background-color: rgba(#2B2B2B, 0.7);
+    color: rgba(#ffffff, 0.7);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-weight: 700;
+
+    &:hover {
+      background-color: rgba(#2B2B2B, 1);
+      color: #ffffff;
+    }
+
+  }
+
+  &__link + &__link {
+    margin-top: 0.5rem;
+  }
+}

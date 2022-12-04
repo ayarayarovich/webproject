@@ -1,5 +1,24 @@
+@import "bootstrap/scss/functions";
+
+@import "bootstrap/scss/variables";
+$enable-grid-classes: false;
+$enable-cssgrid: true;
+
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+
 @import "bootstrap/scss/bootstrap-reboot";
+@import "bootstrap/scss/bootstrap-grid";
+@import "bootstrap/scss/bootstrap-utilities";
+
+
 
 * {
   font-family: 'open-sans-condensed', sans-serif;
 }
+
+@import "utils";
+@import "posters";
+
