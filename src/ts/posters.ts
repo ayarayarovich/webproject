@@ -83,4 +83,23 @@ export function setupPosters(container: HTMLElement) {
             stagger: 0.5
     })
 
+    const posters = gsap.utils.toArray('.poster') as HTMLDivElement[]
+    posters.forEach(poster => {
+        const scalePoster = gsap.to(poster.querySelector('.poster__background'),
+            {
+                opacity: 1,
+                scale: 1.03,
+                duration: 0.4,
+                paused: true
+            })
+
+        poster.addEventListener('mouseenter', () => {
+            scalePoster.play(0)
+        })
+
+        poster.addEventListener('mouseleave', () => {
+            scalePoster.reverse()
+        })
+    })
+
 }
