@@ -33,6 +33,10 @@ export function setupPosters(container: HTMLElement) {
                 </button>
                 <div class="poster__tooltip">
                     <a class="poster__link" href="${desc.watchUrl}" target="_blank">Смотреть</a>
+                    
+                    <!-- Dummy links just for example-->
+                    <a class="poster__link" href="#nu-i-ne-nado">Не смотреть</a>
+                    <a class="poster__link" href="https://web6.mybattletest.space" target="_blank">Заказать шавуху</a>
                 </div>
             </div>
         `)!
