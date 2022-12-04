@@ -69,6 +69,7 @@ export function setupPosters(container: HTMLElement) {
 
         button.addEventListener('click', showTooltip)
         document.addEventListener('scroll', hideTooltip)
+        poster.addEventListener('mouseleave', hideTooltip)
 
         container.append(poster)
     })
