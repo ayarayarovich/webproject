@@ -1,5 +1,4 @@
 import Swiper, {Navigation, Pagination, Keyboard} from 'swiper'
-import {loadVideo} from "./utils";
 
 interface SlideDescription {
     heading: string
@@ -11,12 +10,7 @@ interface SlideDescription {
 export async function setupSlider(container: string) {
     const slideDescriptions: SlideDescription[] = await fetch("/slider-description.json").then(r => r.json());
 
-    for await (const slideDescription of slideDescriptions.map(async (desc) => {
-        return {
-            ...desc,
-            videoUrl: await loadVideo(desc.videoUrl)
-        }
-    })) {
+    for (const slideDescription of slideDescriptions) {
         document.querySelector(`${container} .swiper-wrapper`)!.innerHTML +=
             `
              <div class="swiper-slide">

@@ -4,11 +4,3 @@ export function htmlToElement(html: string) {
     return template.content.firstChild as HTMLElement
 }
 
-export async function loadVideo(src: string) {
-    const res = await fetch(src, {
-        mode: 'no-cors',
-        method: 'GET'
-    });
-    const blob = await res.blob();
-    return URL.createObjectURL(blob);
-}
