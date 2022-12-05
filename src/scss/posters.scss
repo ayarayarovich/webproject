@@ -8,15 +8,16 @@
   }
 
   &__inner > .grid {
-    --bs-columns: 2;
-    --bs-gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
 
     @include media-breakpoint-up(md) {
-      --bs-columns: 3;
-      --bs-gap: 5rem;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 5rem;
     }
     @include media-breakpoint-up(lg) {
-      --bs-gap: 10rem;
+      grid-gap: 10rem;
     }
 
   }
