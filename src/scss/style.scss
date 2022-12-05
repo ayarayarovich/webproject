@@ -19,6 +19,10 @@
   font-family: 'open-sans-condensed', sans-serif;
 }
 
+body {
+  background-color: #000;
+}
+
 @import "utils";
 @import "posters";
-
+@import "slider";

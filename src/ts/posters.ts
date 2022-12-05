@@ -55,11 +55,26 @@ export function setupPosters(container: HTMLElement) {
 
         const showTooltip = () => {
             tooltip.setAttribute('data-show', '')
+            popperInstance.setOptions((options) => ({
+                ...options,
+                modifiers: [
+                    //@ts-ignore
+                    ...options.modifiers,
+                    { name: 'eventListeners', enabled: true },
+                ],
+            }));
             popperInstance.update()
         }
 
         const hideTooltip = () => {
             tooltip.removeAttribute('data-show')
+            popperInstance.setOptions((options) => ({
+                ...options,
+                modifiers: [
+                    ...options.modifiers,
+                    { name: 'eventListeners', enabled: false },
+                ],
+            }));
         }
 
         button.addEventListener('click', showTooltip)
