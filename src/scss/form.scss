@@ -1,0 +1,48 @@
+form{
+  position: relative;
+  background-image: url('/Group19.png');
+
+}
+
+.form-section {
+  background-image: '/Group19.png';
+}
+
+.form_name{
+  background: linear-gradient(180deg, #3E464A 0%, rgba(62, 70, 74, 0) 100%);
+
+  margin: 0 auto;
+  border-radius: 40px;
+  border:0;
+  box-sizing: content-box;
+  padding:20px;
+  margin:10px 0; // add top and bottom margin
+
+  align-items: center;
+  width: 100%;
+}
+
+.form_name_button {
+  width: 20%;
+}
+
+label{
+  color: white;
+  font-size: 32px;
+  margin-left: 30px;
+}
+textarea {
+  width:100%;
+  resize: vertical;
+  padding:50px;
+  border-radius:40px;
+  border:0;
+ // box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+  height:150px;
+//  box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px green;
+}
+
+.gradiend_perehod{
+  background: linear-gradient(180deg, #000000 0%, rgba(62, 70, 74, 0) 100%);
+}
+
