@@ -1,7 +1,10 @@
-footer{
-  background-color: black;
-}
-.butt{
-  color: $white;
-  background-color: $indigo-900;
+
+.footer {
+  background-color: #000000;
+  padding-block: 2rem;
+  display: flex;
+  justify-content: center;
+  &__sign {
+    height: 5rem;
+  }
 }
