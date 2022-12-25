@@ -145,41 +145,44 @@
       </div>
     </div>
 
+    <div class="form">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-auto">
+            <h4 class="form__heading">Расскажи историю своего персонажа...</h4>
+          </div>
+        </div>
 
-    <!-- temporary d-none -->
-    <form class="d-none">
-      <div class="form-section">
-        <div class="container" style="position: center">
-          <div class="row justify-content-center">
-            <div class="col-12 col-lg-6">
-
-              <div class="gradiend_perehod" style="">
-
-
-                <h1 style="color: white; text-align: center " >Расскажи историю своего персонажа</h1>
+        <div class="row justify-content-center">
+          <div class="col-11 col-lg-6">
+            <form action="https://formcarry.com/s/9j0xM_VFU" method="POST" accept-charset="UTF-8">
+              <div class="input-group mb-4">
+                <div class="input-group__input-wrapper">
+                  <input class="input-group__input" id="form-input-name" placeholder="Дарт Экономикус" name="name" type="text">
+                </div>
+                <label class="input-group__label" for="form-input-name">Имя персонажа</label>
               </div>
-
-              <label >Имя</label>
-              <br>
-              <input class="form_name" type="text" autocomplete="on" size="30" style="box-shadow: red" required>
-              <br>
-              <label>E-mail</label>
-              <br>
-              <input class="form_name" type="email" autocomplete="on" size="30" required>
-              <br>
-              <label>Биография</label>
-              <br>
-
-              <textarea class="form_name" required>
-
-              </textarea>
-              <input class="form_name form_name_button"  style="font-size: 2rem" type="submit">
-
-            </div>
+              <div class="input-group mb-5">
+                <div class="input-group__input-wrapper">
+                  <input class="input-group__input" id="form-input-email" placeholder="super.ekonomikus@mail.ru" name="email" type="text">
+                </div>
+                <label class="input-group__label" for="form-input-email">Email</label>
+              </div>
+              <div class="input-group mb-5">
+                <div class="input-group__input-wrapper">
+                  <textarea class="input-group__input" id="form-input-story" rows="4" placeholder="Мой персонаж родился и вырос в ..." name="story" type="text"></textarea>
+                </div>
+                <label class="input-group__label" for="form-input-story">История вашего персонажа</label>
+              </div>
+              <button class="form__submit" type="submit">Отправить</button>
+            </form>
           </div>
         </div>
       </div>
-    </form>
+
+      <div class="form__background form__background--left d-none d-lg-block"></div>
+      <div class="form__background form__background--right d-none d-lg-block"></div>
+    </div>
 
     <footer class="footer">
       <img class="footer__sign" src="/sign.png" alt="">
