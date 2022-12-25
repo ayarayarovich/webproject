@@ -1,12 +1,5 @@
-import Swiper, {Navigation, Pagination, Keyboard} from 'swiper'
-
-interface SlideDescription {
-    heading: string
-    videoUrl: string
-    poster: string
-    desc1: string
-    desc2: string
-}
+import Swiper, {Navigation, Pagination, Keyboard} from 'swiper';
+import { SlideDescription } from "./types";
 
 export async function setupSlider(container: string) {
     const slideDescriptions: SlideDescription[] = await fetch("/slider-description.json").then(r => r.json());
@@ -41,7 +34,6 @@ export async function setupSlider(container: string) {
     const swiper = new Swiper(container, {
         modules: [Navigation, Pagination, Keyboard],
         direction: 'horizontal',
-
         // to hide a thin white line between slides
         spaceBetween: -1,
 
@@ -62,7 +54,7 @@ export async function setupSlider(container: string) {
 
     const activeVideo = swiper.slides[0].querySelector('.slide__background-video') as HTMLVideoElement
     if (activeVideo.paused)
-        activeVideo.play()
+        await activeVideo.play()
 
 
     swiper.on('realIndexChange', swiper => {
@@ -78,6 +70,7 @@ export async function setupSlider(container: string) {
                 inactiveVideo.pause()
             }
         }
-
     })
+
+    window.mainSwiper = swiper;
 }
