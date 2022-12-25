@@ -2,6 +2,7 @@
 <html lang="ru" xmlns="http://www.w3.org/1999/html">
   <head>
     <meta charset="UTF-8" />
+    <meta name="theme-color" content="black">
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="stylesheet" href="https://use.typekit.net/zfv7wzj.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -105,25 +106,8 @@
     </div>
 
 
-
-    <header>
-
-      <!-- <div class="container">
-        <div class="row justify-content-between">
-          <div class="col-auto">
-            <button type="button" class="btn btn-link btn-sm mx-4"><img src="/pngegg(11).png">Тетя Галя</a>
-          </div>
-          <div class="col-auto">
-            <button type="button" class="btn btn-link btn-sm mx-4"><img src="/pngegg(11).png">Олег Марцепан</button>
-          </div>
-          <div class="col-auto">
-            <button type="button" class="btn btn-link btn-sm mx-4"><img src="/pngegg(11).png">Жан Клод Вам Дам</button>
-          </div>
-          <div class="col-auto">
-            <button type="button" class="btn btn-link btn-sm mx-4"><img src="/pngegg(11).png">Дарт Вейдер</button>
-          </div>
-        </div>
-      </div> -->
+    <!-- temporary d-none -->
+    <header class="d-none">
 
       <div class="container">
 
@@ -178,95 +162,18 @@
 
     </header>
 
-    <form>
-
-    <div class="form-section">
-      <div class="container" style="position: center">
-        <div class="row justify-content-center">
-<div class="col-12 col-lg-6">
-
-            <div class="gradiend_perehod" style="">
-
-
-                <h1 style="color: white; text-align: center " >Расскажи историю своего персонажа</h1>
-            </div>
-
-              <label >Имя</label>
-              <br>
-              <input class="form_name" type="text" autocomplete="on" size="30" style="box-shadow: red" required>
-              <br>
-              <label>E-mail</label>
-              <br>
-              <input class="form_name" type="email" autocomplete="on" size="30" required>
-              <br>
-              <label>Биография</label>
-              <br>
-      
-              <textarea class="form_name" required>
-                
-              </textarea>
-             <input class="form_name form_name_button"  style="font-size: 2rem" type="submit">
-
-</div>
-        </div>
-      </div>
-    </div>
-    </form>
-
-  <footer>
-
-    <div class="container_btw">
-      <div class="row justify-content-between">
-        <div class="col-2  butt">
-         <a href="">TikTok </a>
-        </div>
-          <div class="col-2 butt">
-        <a href="">Boosty </a>
-          </div>
-            <div class="col-2 butt">
-                    <a href="">Github </a>
-            </div>
-              <div class="col-2 butt">
-                    <a href="">OK </a>
-              </div>
-                <div class="col-2 butt">
-                  <a href="">о нас  </a>
-                </div>
-
-
-                  <div class="col-2 butt">
-
-                  <a href="">YouTube </a>
-                  </div>
-                    <div class="col-2 butt">
-                   <a href="">VK</a>
-                    </div>
-                    <div class="col-2 butt">
-                   <a href="">OnlyFans</a>
-                    </div>
-                        <div class="col-2 butt">
-                   <a href="">Лицензия</a>
-                        </div>
-                          <div class="col-2 butt">
-                   <a href="">All right reserved</a>
-                          </div>
-  </div>
-  </div>
-
-  </footer>
-
     <div class="swiper">
       <div class="swiper-wrapper"></div>
 
       <div class="swiper-pagination"></div>
 
-      <div class="swiper-button-prev">
+      <div class="swiper-button-prev d-none d-lg-block">
         <svg width="39" height="23" viewBox="0 0 39 23" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M4.58301 18.583L19.2963 5.41698L34.583 18.583" stroke="white" stroke-width="8" stroke-linecap="round"/>
         </svg>
       </div>
 
-      <div class="swiper-button-next">
+      <div class="swiper-button-next d-none d-lg-block">
         <svg width="39" height="23" viewBox="0 0 39 23" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M4.58301 18.583L19.2963 5.41698L34.583 18.583" stroke="white" stroke-width="8" stroke-linecap="round"/>
         </svg>
@@ -282,6 +189,55 @@
         </div>
       </div>
     </div>
+
+
+    <!-- temporary d-none -->
+    <form class="d-none">
+      <div class="form-section">
+        <div class="container" style="position: center">
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-6">
+
+              <div class="gradiend_perehod" style="">
+
+
+                <h1 style="color: white; text-align: center " >Расскажи историю своего персонажа</h1>
+              </div>
+
+              <label >Имя</label>
+              <br>
+              <input class="form_name" type="text" autocomplete="on" size="30" style="box-shadow: red" required>
+              <br>
+              <label>E-mail</label>
+              <br>
+              <input class="form_name" type="email" autocomplete="on" size="30" required>
+              <br>
+              <label>Биография</label>
+              <br>
+
+              <textarea class="form_name" required>
+
+              </textarea>
+              <input class="form_name form_name_button"  style="font-size: 2rem" type="submit">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <footer>
+
+      <div class="container-fluid">
+        <div class="row justify-content-center py-4">
+          <div class="col-auto footer__watermark text-center">
+            Designed by <br>
+            sawertsand X ayarayarovich
+          </div>
+        </div>
+      </div>
+
+    </footer>
 
 
     <script type="module" src="/src/main.ts"></script>

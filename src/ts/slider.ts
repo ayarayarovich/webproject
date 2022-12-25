@@ -3,6 +3,7 @@ import Swiper, {Navigation, Pagination, Keyboard} from 'swiper'
 interface SlideDescription {
     heading: string
     videoUrl: string
+    poster: string
     desc1: string
     desc2: string
 }
@@ -15,19 +16,21 @@ export async function setupSlider(container: string) {
             `
              <div class="swiper-slide">
               <div class="slide">
-                <div class="container-fluid position-absolute" style="z-index: 9">
-                  <div class="row align-items-center">
-                    <div class="col-3 offset-1">
-                      <h1 class="slide__heading">${slideDescription.heading}</h1>
-                      <p class="slide__paragraph slide__paragraph--left">${slideDescription.desc1}</p>
+                <div class="container-fluid h-100 position-absolute py-5" style="z-index: 9">
+                  <div class="row h-100 align-content-between align-content-lg-center align-items-center">
+                    <div class="offset-1 col-10 offset-md-2 col-md-8 col-lg-3 offset-lg-1">
+                      <h1 class="slide__heading text-center text-lg-start">${slideDescription.heading}</h1>
+                      <p class="slide__paragraph slide__paragraph--left fs-6 d-none d-lg-block">${slideDescription.desc1}</p>
                     </div>
-                    <div class="col-3 offset-4">
-                      <p class="slide__paragraph slide__paragraph--right">${slideDescription.desc2}</p>
+                    <div class="offset-1 col-10 offset-md-2 col-md-8 col-lg-3 offset-lg-4">
+                      <p class="slide__paragraph slide__paragraph--right fs-6">${slideDescription.desc2}</p>
                     </div>
                   </div>
                 </div>
                 <div class="slide__horizontal-shadows"></div>
-                <video class="slide__background-video" src="${slideDescription.videoUrl}" muted loop></video>
+                <video class="slide__background-video" poster="${slideDescription.poster}" muted loop>
+                  <source src="${slideDescription.videoUrl}" type="video/webm">
+                </video>
               </div>
             </div>
         `
