@@ -84,24 +84,32 @@ export function setupPosters(container: HTMLElement) {
     })
 
     gsap.registerPlugin(ScrollTrigger)
-    gsap.from('.poster',
-        {
-            scrollTrigger: '.poster',
-            opacity: 0,
-            yPercent: 15,
-            duration: 0.4,
-            stagger: 0.5
-    })
 
     const posters = gsap.utils.toArray('.poster') as HTMLDivElement[]
     posters.forEach(poster => {
-        const scalePoster = gsap.to(poster.querySelector('.poster__background'),
+        gsap.from(poster,
             {
-                opacity: 1,
-                scale: 1.03,
-                duration: 0.4,
-                paused: true
+                scrollTrigger: poster,
+                opacity: 0,
+                scale: 0.8,
+                yPercent: 40,
+                duration: 0.6,
             })
+
+        const scalePoster = gsap.timeline({
+            paused: true,
+        }, );
+        scalePoster.to(poster.querySelector('.poster__background'), {
+            opacity: 1,
+            scale: 1.05,
+            duration: 0.4,
+            ease: 'power4'
+        }, 0)
+        scalePoster.to(poster, {
+            scale: 1.05,
+            duration: 0.4,
+            ease: 'power4'
+        }, 0)
 
         poster.addEventListener('mouseenter', () => {
             scalePoster.play(0)
