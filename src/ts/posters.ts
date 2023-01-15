@@ -36,7 +36,7 @@ export function setupPosters(container: HTMLElement) {
                     
                     <!-- Dummy links just for example-->
                     <a class="poster__link" href="#nu-i-ne-nado">Не смотреть</a>
-                    <a class="poster__link" href="https://web6.mybattletest.space" target="_blank">Заказать шавуху</a>
+                    <a class="poster__link" href="https://web6.ayarayarovich.tech" target="_blank">Заказать шавуху</a>
                 </div>
             </div>
         `)!
